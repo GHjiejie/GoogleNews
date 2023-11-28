@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 4324349 */
+  src: url('@/static/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\eb73";
+}
+
+.icon-tiktok:before {
+  content: "\eb74";
+}
+
+.icon-twitter:before {
+  content: "\eb75";
+}
+
+.icon-youtube:before {
+  content: "\eb76";
+}
+
+.icon-weixin:before {
+  content: "\eb77";
+}
+
+.icon-tengxunQQ:before {
+  content: "\eb78";
+}
+
+.icon-bilibili:before {
+  content: "\eb79";
+}
+
+.icon-guanzhu:before {
+  content: "\e600";
+}
+
+.icon-tianjiaquyu:before {
+  content: "\e632";
+}
+
+.icon-shezhi:before {
+  content: "\e817";
+}
+
+.icon-google2015logo:before {
+  content: "\e608";
+}
+
+.icon-fankui:before {
+  content: "\e738";
+}
+
+.icon-gaojisousuo:before {
+  content: "\e62d";
+}
+
+.icon-jiantou_liebiaoxiangyou:before {
+  content: "\eb03";
+}
+
+.icon-jiantou_liebiaoxiangzuo:before {
+  content: "\eb04";
+}
+
+.icon-baocun:before {
+  content: "\e936";
+}
+
+.icon-yuyan:before {
+  content: "\e684";
+}
+
+.icon-lishi:before {
+  content: "\e61a";
+}
+
+.icon-guge:before {
+  content: "\e696";
+}
+
+.icon-yueliang:before {
+  content: "\e6b6";
+}

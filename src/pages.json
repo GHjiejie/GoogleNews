@@ -1,0 +1,108 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "home",
+				// 设置下拉刷新允许下拉刷新
+				"enablePullDownRefresh": true,
+				// 设置导航栏为自己定义
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "user",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/newsDetail/newsDetail",
+			"style": {
+				"navigationBarTitleText": "News detail"
+			}
+		},
+		{
+			"path": "pages/searchNews/searchNews",
+			"style": {
+				"navigationBarTitleText": "searchNews",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/historyPanel/historyPanel",
+			"style": {
+				"navigationBarTitleText": "History"
+			}
+		},
+		{
+			"path": "pages/concernedPanel/concernedPanel",
+			"style": {
+				"navigationBarTitleText": "My following"
+			}
+		},
+		{
+			"path": "pages/NotFound/NotFound",
+			"style": {
+				"navigationBarTitleText": "NotFound"
+			}
+		},
+		{
+			"path": "pages/moreSettings/moreSettings",
+			"style": {
+				"navigationBarTitleText": "Settings"
+			}
+		}
+	],
+	"easycom": {
+		// 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
+		// 自动浏览
+		"autoscan": true,
+		"custom": {
+			"^u-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#585b65",
+		"borderStyle": "black",
+		// "backgroundColor": "black",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "Home",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png"
+			},
+			{
+				"pagePath": "pages/search/search",
+				"text": "Search",
+				"iconPath": "static/tabbar/search.png",
+				"selectedIconPath": "static/tabbar/search-active.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "Me",
+				"iconPath": "static/tabbar/user.png",
+				"selectedIconPath": "static/tabbar/user-active.png"
+			}
+		]
+	}
+}
