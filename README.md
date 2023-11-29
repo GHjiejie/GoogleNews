@@ -1,7 +1,7 @@
 # GoogleNews
 
 #### 介绍
-项目基于国外接口https://newsapi.org/实现，实时更新全球各地的新闻数据
+项目基于国外接口 https://newsapi.org/ 实现，实时更新全球各地的新闻数据
 
 #### 软件架构
 vue3、uniapp
