@@ -4,7 +4,7 @@
   <view class="searchTopModule" :style="{ paddingTop: safeAreaInsets.top + 'px' }">
     <view class="searchTop">
       <view class="searchSettings">
-        <!-- <u-icon name="list" color="#cacacc" size="28" @click="showSearchPopup"></u-icon> -->
+        <u-icon name="list" color="#cacacc" size="28" @click="showSearchPopup"></u-icon>
       </view>
       <view class="websiteTitle">
         <view class="t-icon t-icon-google2015logo test"></view>
@@ -14,11 +14,12 @@
       </view>
     </view>
     <!-- 弹出层的内容 -->
-    <!-- <view class="searchSettings">
+    <view class="searchSettings">
       <u-popup :show="show" mode="left" @close="close" :safeAreaInsetTop="true">
-        <systemSettings></systemSettings>
+        <!-- <systemSettings></systemSettings> -->
+        <changeApikey></changeApikey>
       </u-popup>
-    </view> -->
+    </view>
     <categoryList></categoryList>
   </view>
 </template>
