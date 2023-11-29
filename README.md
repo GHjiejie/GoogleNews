@@ -12,7 +12,7 @@ vue3、uniapp
 本地安装node后,终端运行npm install
 
 
-####项目展示
+#### 项目展示
 
 <img src="image.png" alt="Image 1" style="width:200px;height:400px;">
 <!-- <img src="image-1.png" alt="Image 2" style="width:200px;height:400px;"> -->
