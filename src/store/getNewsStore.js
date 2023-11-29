@@ -1,8 +1,11 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { inject } from 'vue';
+// import { inject } from 'vue';
+import useApiStore from './userApiStore.js'
+const apiStore = useApiStore();
+const { apiKey } = apiStore;
 const useGetNewsStore = defineStore('getNewsStore', () => {
-    const config = inject('$config');
+    // const config = inject('$config');
     const newsList = ref({});
     const pageSize = ref(20);
     const page = ref(1);
@@ -18,7 +21,7 @@ const useGetNewsStore = defineStore('getNewsStore', () => {
                     category: category,
                     pageSize: pageSize.value,
                     page: page,
-                    apiKey: config.apiKey,
+                    apiKey: apiStore.apiKey,
                 },
                 timeout: 4000,
             });
@@ -61,7 +64,7 @@ const useGetNewsStore = defineStore('getNewsStore', () => {
                 sources: sources,
                 pageSize: pageSize.value,
                 page: page.value,
-                apiKey: config.apiKey,
+                apiKey: apiStore.apiKey,
             }
         });
         if (res.data.articles.length === 0) {

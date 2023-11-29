@@ -15,7 +15,7 @@
     </view>
     <!-- 弹出层的内容 -->
     <view class="searchSettings">
-      <u-popup :show="show" mode="left" @close="close" :safeAreaInsetTop="true">
+      <u-popup :show="show" mode="top" @close="close" round="30" :safeAreaInsetTop="true">
         <!-- <systemSettings></systemSettings> -->
         <changeApikey></changeApikey>
       </u-popup>

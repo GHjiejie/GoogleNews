@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { inject } from 'vue'
+import useApiStore from './userApiStore.js'
+const apiStore = useApiStore();
+const { apiKey } = apiStore;
+// console.log(apiStore.apiKey);
 const useSearchNewsStore = defineStore('searchNewsStore', () => {
     const q = ref('');
-    const config = inject('$config');
     const newsList = ref({});
     const pageSize = ref(20);
     const page = ref(1);
@@ -14,15 +16,16 @@ const useSearchNewsStore = defineStore('searchNewsStore', () => {
     const from = ref('');
     const to = ref('');
     const baseURL = ref('https://newsapi.org/v2/everything');
-    const apiKey = ref(config.apiKey);
+    // const apiKey = ref(config.apiKey);
     const finalRequestURL = ref('');
     const searchStatus = ref(1);//0为搜索的结果为空，1为搜索的结果不为空
+
 
     //编辑请求参数
     const buildFinalRequest = (baseURL, apiKey, q, language, sortBy, from, to) => {
         let requestParams = {
             q: q,
-            apiKey: apiKey,
+            apiKey: apiStore.apiKey,
             pageSize: pageSize.value,
         }
         if (language) {
@@ -116,7 +119,7 @@ const useSearchNewsStore = defineStore('searchNewsStore', () => {
             url: `https://newsapi.org/v2/everything`,
             data: {
                 q: q,
-                apiKey: config.apiKey,
+                apiKey: apiStore.apiKey,
                 pageSize: 1,
             },
             timeout: 4000,

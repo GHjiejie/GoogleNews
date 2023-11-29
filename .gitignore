@@ -19,6 +19,3 @@ dist
 *.njsproj
 *.sln
 *.sw?
-
-.hbuliderx
-unpackage/res/icons

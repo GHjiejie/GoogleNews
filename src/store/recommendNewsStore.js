@@ -1,8 +1,10 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { inject } from 'vue';
+import useApiStore from './userApiStore.js'
+const apiStore = useApiStore();
+const { apiKey } = apiStore;
 const recommendNewsStore = defineStore('recommendNews', () => {
-    const config = inject('$config');
+    // const config = inject('$config');
     const pageSize = ref(20);
     const recommendCountry = ref('us');
     const recommendCategory = ref('general');
@@ -15,7 +17,7 @@ const recommendNewsStore = defineStore('recommendNews', () => {
                     country: country,
                     category: category,
                     pageSize: pageSize.value,
-                    apiKey: config.apiKey,
+                    apiKey: apiStore.apiKey,
                 },
                 timeout: 4000,
             });
