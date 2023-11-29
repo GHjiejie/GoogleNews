@@ -13,8 +13,9 @@ vue3、uniapp
 
 
 ####项目展示
+
 <img src="image.png" alt="Image 1" style="width:200px;height:400px;">
-<img src="image-1.png" alt="Image 2" style="width:200px;height:400px;">
+<!-- <img src="image-1.png" alt="Image 2" style="width:200px;height:400px;"> -->
 <img src="image-2.png" alt="Image 3" style="width:200px;height:400px;">
 <img src="image-3.png" alt="Image 4" style="width:200px;height:400px;">
 <img src="image-4.png" alt="Image 5" style="width:200px;height:400px;">
